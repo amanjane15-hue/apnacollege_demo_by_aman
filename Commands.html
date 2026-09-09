@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Git Commands</title>
+</head>
+<body>
+	<h1>Basic Git Commands</h1>
+
+	<h2>Setup</h2>
+	<ul>
+		<li><code>git --version</code> - Check the installed Git version.</li>
+		<li><code>git config --global user.name "Your Name"</code> - Set your Git username.</li>
+		<li><code>git config --global user.email "you@example.com"</code> - Set your Git email.</li>
+		<li><code>git config --list</code> - View Git configuration.</li>
+	</ul>
+
+	<h2>Create or Copy a Repository</h2>
+	<ul>
+		<li><code>git init</code> - Create a new local Git repository.</li>
+		<li><code>git clone &lt;repository-url&gt;</code> - Copy a remote repository to your computer.</li>
+		<li><code>git remote -v</code> - Show connected remote repositories.</li>
+		<li><code>git remote add origin &lt;repository-url&gt;</code> - Add a remote repository.</li>
+	</ul>
+
+	<h2>Check Changes</h2>
+	<ul>
+		<li><code>git status</code> - Show changed, staged, and untracked files.</li>
+		<li><code>git diff</code> - Show unstaged changes.</li>
+		<li><code>git diff --staged</code> - Show staged changes.</li>
+		<li><code>git log</code> - Show the commit history.</li>
+		<li><code>git log --oneline</code> - Show a shorter commit history.</li>
+		<li><code>git show &lt;commit-id&gt;</code> - Show details of a commit.</li>
+	</ul>
+
+	<h2>Stage and Commit</h2>
+	<ul>
+		<li><code>git add &lt;file&gt;</code> - Stage one file.</li>
+		<li><code>git add .</code> - Stage all changes in the current directory.</li>
+		<li><code>git commit -m "Your message"</code> - Save staged changes in a commit.</li>
+		<li><code>git commit -am "Your message"</code> - Stage and commit tracked files.</li>
+		<li><code>git commit --amend</code> - Edit the most recent commit.</li>
+	</ul>
+
+	<h2>Branches</h2>
+	<ul>
+		<li><code>git branch</code> - List local branches.</li>
+		<li><code>git branch &lt;branch-name&gt;</code> - Create a branch.</li>
+		<li><code>git switch &lt;branch-name&gt;</code> - Move to another branch.</li>
+		<li><code>git switch -c &lt;branch-name&gt;</code> - Create and move to a new branch.</li>
+		<li><code>git merge &lt;branch-name&gt;</code> - Merge a branch into the current branch.</li>
+		<li><code>git branch -d &lt;branch-name&gt;</code> - Delete a merged branch.</li>
+		<li><code>git branch -M main</code> - Rename the current branch to <code>main</code>.</li>
+	</ul>
+
+	<h2>Remote Repositories</h2>
+	<ul>
+		<li><code>git fetch</code> - Download remote changes without merging them.</li>
+		<li><code>git pull</code> - Download and merge changes from the remote.</li>
+		<li><code>git pull origin main</code> - Pull the <code>main</code> branch from <code>origin</code>.</li>
+		<li><code>git push</code> - Upload local commits to the remote.</li>
+		<li><code>git push -u origin main</code> - Push <code>main</code> and set its upstream branch.</li>
+		<li><code>git push origin &lt;branch-name&gt;</code> - Push a branch to the remote.</li>
+		<li><code>git push --delete origin &lt;branch-name&gt;</code> - Delete a remote branch.</li>
+	</ul>
+
+	<h2>Undo Changes</h2>
+	<ul>
+		<li><code>git restore &lt;file&gt;</code> - Discard unstaged changes in a file.</li>
+		<li><code>git restore --staged &lt;file&gt;</code> - Remove a file from staging.</li>
+		<li><code>git revert &lt;commit-id&gt;</code> - Create a new commit that reverses another commit.</li>
+		<li><code>git reset --soft HEAD~1</code> - Undo the last commit but keep changes staged.</li>
+		<li><code>git reset --mixed HEAD~1</code> - Undo the last commit and unstage changes.</li>
+		<li><code>git reset --hard HEAD~1</code> - Undo the last commit and delete its changes.</li>
+	</ul>
+
+	<h2>Useful Commands</h2>
+	<ul>
+		<li><code>git tag</code> - List tags.</li>
+		<li><code>git tag v1.0.0</code> - Create a tag.</li>
+		<li><code>git stash</code> - Temporarily save uncommitted changes.</li>
+		<li><code>git stash pop</code> - Restore the latest stashed changes.</li>
+		<li><code>git clean -n</code> - Preview untracked files that can be removed.</li>
+		<li><code>git clean -f</code> - Remove untracked files.</li>
+		<li><code>git help &lt;command&gt;</code> - Open help for a Git command.</li>
+	</ul>
+</body>
+</html>
