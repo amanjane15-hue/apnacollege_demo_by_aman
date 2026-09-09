@@ -1,0 +1,163 @@
+Basic Git Commands
+==================
+
+SETUP
+-----
+git --version
+    Check the installed Git version.
+
+git config --global user.name "Your Name"
+    Set your Git username.
+
+git config --global user.email "you@example.com"
+    Set your Git email.
+
+git config --list
+    View Git configuration.
+
+
+CREATE OR COPY A REPOSITORY
+---------------------------
+git init
+    Create a new local Git repository.
+
+git clone <repository-url>
+    Copy a remote repository to your computer.
+
+git remote -v
+    Show connected remote repositories.
+
+git remote add origin <repository-url>
+    Add a remote repository.
+
+
+CHECK CHANGES
+-------------
+git status
+    Show changed, staged, and untracked files.
+
+git diff
+    Show unstaged changes.
+
+git diff --staged
+    Show staged changes.
+
+git log
+    Show the commit history.
+
+git log --oneline
+    Show a shorter commit history.
+
+git show <commit-id>
+    Show details of a commit.
+
+
+STAGE AND COMMIT
+----------------
+git add <file>
+    Stage one file.
+
+git add .
+    Stage all changes in the current directory.
+
+git commit -m "Your message"
+    Save staged changes in a commit.
+
+git commit -am "Your message"
+    Stage and commit tracked files.
+
+git commit --amend
+    Edit the most recent commit.
+
+
+BRANCHES
+--------
+git branch
+    List local branches.
+
+git branch <branch-name>
+    Create a branch.
+
+git switch <branch-name>
+    Move to another branch.
+
+git switch -c <branch-name>
+    Create and move to a new branch.
+
+git merge <branch-name>
+    Merge a branch into the current branch.
+
+git branch -d <branch-name>
+    Delete a merged branch.
+
+git branch -M main
+    Rename the current branch to main.
+
+
+REMOTE REPOSITORIES
+-------------------
+git fetch
+    Download remote changes without merging them.
+
+git pull
+    Download and merge changes from the remote.
+
+git pull origin main
+    Pull the main branch from origin.
+
+git push
+    Upload local commits to the remote.
+
+git push -u origin main
+    Push main and set its upstream branch.
+
+git push origin <branch-name>
+    Push a branch to the remote.
+
+git push --delete origin <branch-name>
+    Delete a remote branch.
+
+
+UNDO CHANGES
+------------
+git restore <file>
+    Discard unstaged changes in a file.
+
+git restore --staged <file>
+    Remove a file from staging.
+
+git revert <commit-id>
+    Create a new commit that reverses another commit.
+
+git reset --soft HEAD~1
+    Undo the last commit but keep changes staged.
+
+git reset --mixed HEAD~1
+    Undo the last commit and unstage changes.
+
+git reset --hard HEAD~1
+    Undo the last commit and delete its changes.
+
+
+USEFUL COMMANDS
+---------------
+git tag
+    List tags.
+
+git tag v1.0.0
+    Create a tag.
+
+git stash
+    Temporarily save uncommitted changes.
+
+git stash pop
+    Restore the latest stashed changes.
+
+git clean -n
+    Preview untracked files that can be removed.
+
+git clean -f
+    Remove untracked files.
+
+git help <command>
+    Open help for a Git command.
